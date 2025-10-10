@@ -131,7 +131,7 @@ IMAGE_URL = '/images/'
 IMAGE_ROOT = os.path.join(BASE_DIR, 'images')
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / 'static']
+# STATICFILES_DIRS = [BASE_DIR / 'static']
 #NG STATIC_ROOT = BASE_DIR / 'static'
-#NG STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 #NG STATIC_ROOT = os.path.join(BASE_DIR, 'static')
