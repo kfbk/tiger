@@ -1,4 +1,5 @@
 {% extends "app/base.html" %} {% block content %}
+{% load static %}
 
 <div class="row my-2">
   <div class="col-6">
@@ -10,7 +11,7 @@
     </div>
   </div>
   <div class="col-6 resizeimage">
-    <img src="images/indexphoto1.jpg">
+    <img src="{% static 'img/indexphoto1.jpg' %}">
   </div>
 </div>
 <div class="row mb-2">
@@ -40,7 +41,7 @@
   <div class="col-12 my-background text-white">
     <div class="row">
       <div class="col-4 resizeimage">
-        <img src="images/indexphoto2.jpg">
+        <img src="{% static 'img/indexphoto2.jpg' %}">
       </div>
       <div class="col-8">
         <h3>日本酒も焼酎、ワインも豊富！</h3>
@@ -56,7 +57,7 @@
     <h3>南口から徒歩1分！1次会、2次会にも最適。</h3>
     <div class="row">
       <div class="col-4 resizeimage">
-          <img src="images/indexphoto3.jpg">
+          <img src="{% static 'img/indexphoto3.jpg' %}">
       </div>
       <div class="col-8">
         居酒屋XXX<br >

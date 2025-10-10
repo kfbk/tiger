@@ -23,7 +23,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-tsrihwd^j#^vw_7tnb4zcjbz)=@l0n#^a5&$95b^zmuz8y=82@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -130,5 +131,7 @@ IMAGE_URL = '/images/'
 IMAGE_ROOT = os.path.join(BASE_DIR, 'images')
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
-# STATICFILES_DIRS = [BASE_DIR / 'static']
+STATICFILES_DIRS = [BASE_DIR / 'static']
+#NG STATIC_ROOT = BASE_DIR / 'static'
+#NG STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+#NG STATIC_ROOT = os.path.join(BASE_DIR, 'static')

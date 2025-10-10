@@ -25,3 +25,4 @@ urlpatterns = [
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.IMAGE_URL, document_root=settings.IMAGE_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
