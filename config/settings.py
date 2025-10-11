@@ -23,8 +23,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-tsrihwd^j#^vw_7tnb4zcjbz)=@l0n#^a5&$95b^zmuz8y=82@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = False
+DEBUG = True
+# DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -127,11 +127,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 import os
 
-IMAGE_URL = '/images/'
-IMAGE_ROOT = os.path.join(BASE_DIR, 'images')
+# 静的ファイルの呼び出し設定を１番下に追加
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT_NAME = os.path.basename(BASE_DIR)
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = '/var/www/{}/static'.format(PROJECT_NAME)
 
-STATIC_URL = '/static/'
+# STATIC_URL = '/static/'
 # STATICFILES_DIRS = [BASE_DIR / 'static']
-#NG STATIC_ROOT = BASE_DIR / 'static'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
-#NG STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

@@ -7,9 +7,9 @@
 
 body {
   /* background: #f1f1f1; */
-  background-image: url("/images/wallpaper3.jpg"); /* 画像のパスを指定 */
+/*  background-image: url("/images/wallpaper3.jpg");  画像のパスを指定 */
   /*  background-size: cover;  画面全体を覆うように画像サイズを調整 */
-    background-repeat: repeat; /* 画像を繰り返さない */
+  /*  background-repeat: repeat;  画像を繰り返さない */
   /*  background-position: center;  画像の中心を中央に表示 */
   display: flex;
   flex-flow: column;

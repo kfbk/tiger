@@ -3,7 +3,7 @@ from django.db import models
 class Cooking(models.Model):
     name = models.CharField('料理', max_length=100)
     description = models.TextField('説明', default="", blank=True)
-    image = models.ImageField(upload_to='images', verbose_name='イメージ画像', null=True, blank=True)
+    image = models.ImageField(upload_to='media', verbose_name='イメージ画像', null=True, blank=True)
 
     def __str__(self):
         return self.name
