@@ -40,7 +40,8 @@ main {
 .resizeimage img { width: 100%; }
 
 .my-background {
-  background-color: #331509;
+  /* background-color: #331509; */
+  background-color: #2b485e;
 }
 
 /* shop */
@@ -58,4 +59,18 @@ main {
 
 .shop td {
   padding: 4px;
+}
+
+.iframe-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: calc(450 / 600 * 100%);  /* height ÷ width × 100 */
+}
+
+.iframe-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

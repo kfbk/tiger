@@ -2,6 +2,29 @@
 {% load static %}
 
 <div class="row my-2">
+  <div class="col-12">
+    <div class="card">
+    <div class="card-body">
+      <div class="card-title">
+        お知らせ
+      </div>
+        {% for post in post_data %}
+            <div class="card-text px-2 py-3">
+                {{ post.created_at|date:"Y-m-d" }}：{{ post.title }}
+            </div>
+        {% empty %}
+            <p>まだお知らせがありません</p>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row mb-2">
+  <div class="col-12 my-background text-center text-white py-5">
+    今、この瞬間の贅沢です。旬のメニュー
+  </div>
+</div>
+<div class="row my-2">
   <div class="col-6">
     <h2>海がないのに、潮の香りがする。</h2>
     <div>食材の仕入れから、仕事は始まる。<br >
@@ -12,29 +35,6 @@
   </div>
   <div class="col-6 resizeimage">
     <img src="{% static 'img/indexphoto1.jpg' %}">
-  </div>
-</div>
-<div class="row mb-2">
-  <div class="col-12 my-background text-center text-white py-5">
-    今、この瞬間の贅沢です。旬のメニュー
-  </div>
-</div>
-<div class="row mb-2">
-  <div class="col-12">
-    <div class="card">
-    <div class="card-body">
-      <div class="card-title">
-        お知らせ
-      </div>
-        {% for post in post_data %}
-                    <div class="card-text px-2 py-3">
-                        {{ post.created_at }}：{{ post.title }}
-                    </div>
-        {% empty %}
-            <p>まだ店舗がありません</p>
-        {% endfor %}
-      </div>
-    </div>
   </div>
 </div>
 <div class="row mb-2">
