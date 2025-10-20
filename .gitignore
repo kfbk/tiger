@@ -26,3 +26,4 @@ local_settings.py
 
 # else
 satou.txt
+.env
